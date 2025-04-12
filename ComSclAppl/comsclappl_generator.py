@@ -37,7 +37,7 @@ class Generator:
             self.build_content()
             file.write(self.content)
         
-        print(f"[DEBUG] File existence: {os.path.join(self.dir, self.filename)}")
+        print(f"[DEBUG] File existence: {os.path.isfile(os.path.join(self.dir, self.filename))}")
 
     def build_header(self):
         """
