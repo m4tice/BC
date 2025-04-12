@@ -9,7 +9,7 @@ from datetime import datetime
 from settings import FILE_ENCONDING
 
 try:
-    from temp.extract import model
+    from Conf.__CONFIG.extract import model
 except ModuleNotFoundError:
     print("[ERROR] Model not found")
 
