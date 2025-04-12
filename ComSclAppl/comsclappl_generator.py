@@ -9,7 +9,7 @@ from datetime import datetime
 from settings import FILE_ENCONDING
 
 try:
-    from Conf.__CONFIG.extract import model
+    from temp.extract import model
 except ModuleNotFoundError:
     print("[ERROR] Model not found")
 
@@ -21,6 +21,10 @@ class Generator:
     def __init__(self, filename):
         self.filename = filename
         self.dir = "./_out"
+
+        if os.path.isdir(self.dir) is False:
+            os.makedirs(self.dir)
+
         self.content = ""
 
     def generate(self):
